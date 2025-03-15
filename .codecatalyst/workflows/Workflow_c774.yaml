@@ -43,6 +43,8 @@ Actions:
       Fleet: Linux.x86-64.Large
     Environment:
       Name: codecatalyst-enviromment
+    DependsOn:
+      - AWSCDKDeploy_c9
   AWSCDKDeploy_c9:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-deploy@v2.0.2
@@ -60,5 +62,3 @@ Actions:
       StackName: SpringbootFargateCdkStack
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
-    DependsOn:
-      - Build_62

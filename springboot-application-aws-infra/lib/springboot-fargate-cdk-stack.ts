@@ -11,8 +11,8 @@ export class SpringbootFargateCdkStack  extends cdk.Stack {
   constructor(scope: Construct, id: string, props: cdk.StackProps) {
     super(scope, id, props);
 
-    const s3Bucket = new s3.Bucket(this, 'hta-example-springboot-bucket', {
-      bucketName: 'hta-example-springboot-bucket',
+    const s3Bucket = new s3.Bucket(this, 'hta-example-springboot-bucket12', {
+      bucketName: 'hta-example-springboot-bucket12',
       publicReadAccess: false,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,

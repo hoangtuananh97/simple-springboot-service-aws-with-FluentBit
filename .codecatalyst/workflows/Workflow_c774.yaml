@@ -23,9 +23,13 @@ Actions:
     Outputs:
       # Optional; Automatically discover reports for popular test frameworks
       AutoDiscoverReports:
-        Enabled: true
+        Enabled: false
         # Use as prefix for the report files
         ReportNamePrefix: rpt
+      Artifacts:
+        - Name: cdkout
+          Files:
+            - "**/*"
     # Defines the action's properties.
     Configuration:
       # Required - Steps are sequential instructions that run shell commands
@@ -54,10 +58,29 @@ Actions:
       # Optional
       Sources:
         - WorkflowSource # This specifies that the action requires this Workflow as a source
+      Artifacts:
+        - cdkout
     Compute:
       Type: EC2 # Defines the action's properties.
     Configuration:
       StackName: SpringbootFargateCdkStack
+      CdkRootPath: springboot-application-aws-infra/
+      Region: ap-southeast-1
+      CdkCliVersion: 2.179.0
+    DependsOn:
+      - AWSCDKBootstrap_ec
+  AWSCDKBootstrap_ec:
+    # Identifies the action. Do not modify this value.
+    Identifier: aws/cdk-bootstrap@v2.0.1
+    # Required; You can use an environment to access AWS resources.
+    Environment:
+      Name: codecatalyst-enviromment
+    Inputs:
+      Artifacts:
+        - cdkout
+    Compute:
+      Type: EC2 # Defines the action's properties.
+    Configuration:
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
     DependsOn:

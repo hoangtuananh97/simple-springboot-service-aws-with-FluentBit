@@ -6,7 +6,7 @@ import {SpringbootFargateCdkStack} from '../lib/springboot-fargate-cdk-stack';
 const app = new cdk.App();
 const DEFAULT_REGION = 'ap-southeast-1';
 
-new SpringbootFargateCdkStack(app, 'SpringbootFargateCdkStackDev', {
+new SpringbootFargateCdkStack(app, 'SpringbootFargateCdkStackTesting2', {
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: DEFAULT_REGION,

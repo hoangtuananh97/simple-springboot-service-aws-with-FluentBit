@@ -85,3 +85,21 @@ Actions:
       CdkCliVersion: 2.179.0
     DependsOn:
       - Build_62
+  AmazonS3Publish_d7:
+    # Identifies the action. Do not modify this value.
+    Identifier: aws/s3-publish@v1.1.1
+    # Required; You can use an environment to access AWS resources.
+    Environment:
+      Name: codecatalyst-enviromment
+    # Specifies the source and/or artifacts to pass to the action as input.
+    Inputs:
+      Artifacts:
+        - cdkout
+    Compute:
+      Type: EC2 # Defines the action's properties.
+    Configuration:
+      DestinationBucketName: codecatalyst-s3
+      TargetPath: cdk.out
+      SourcePath: cloudformation-templates
+    DependsOn:
+      - AWSCDKBootstrap_ec

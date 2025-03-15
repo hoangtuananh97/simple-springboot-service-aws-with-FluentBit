@@ -26,11 +26,6 @@ Actions:
         Enabled: true
         # Use as prefix for the report files
         ReportNamePrefix: rpt
-      Artifacts:
-        - Name: newOutput
-          Files:
-            - appspec.yml
-            - taskdef.json
     # Defines the action's properties.
     Configuration:
       # Required - Steps are sequential instructions that run shell commands

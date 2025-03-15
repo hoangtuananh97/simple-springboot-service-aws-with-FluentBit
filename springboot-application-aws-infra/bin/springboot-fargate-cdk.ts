@@ -4,7 +4,7 @@ import * as cdk from 'aws-cdk-lib';
 import {SpringbootFargateCdkStack} from '../lib/springboot-fargate-cdk-stack';
 
 const app = new cdk.App();
-const DEFAULT_REGION = 'ap-northeast-1';
+const DEFAULT_REGION = 'ap-southeast-1';
 
 new SpringbootFargateCdkStack(app, 'SpringbootFargateCdkStack', {
   env: {

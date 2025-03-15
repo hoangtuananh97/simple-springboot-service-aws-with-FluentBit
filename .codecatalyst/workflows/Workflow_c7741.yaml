@@ -60,7 +60,7 @@ Actions:
     Compute:
       Type: EC2 # Defines the action's properties.
     Configuration:
-      StackName: SpringbootFargateCdkStack
+      StackName: SpringbootFargateCdkStackDev
       CdkRootPath: springboot-application-aws-infra/
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0

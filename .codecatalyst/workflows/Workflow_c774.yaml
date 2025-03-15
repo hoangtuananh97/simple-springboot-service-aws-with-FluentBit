@@ -6,6 +6,8 @@ Triggers:
   - Type: Push
     Branches:
       - dev
+  - Type: PUSH
+    Branches:
       - testing
 
 # Required - Define action configurations.

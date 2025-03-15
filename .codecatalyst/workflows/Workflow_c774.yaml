@@ -12,7 +12,7 @@ Triggers:
 
 # Required - Define action configurations.
 Actions:
-  Build_62:
+  Build_01:
     # Identifies the action. Do not modify this value.
     Identifier: aws/build@v1.0.0
     # Specifies the source and/or artifacts to pass to the action as input.
@@ -47,7 +47,7 @@ Actions:
       Fleet: Linux.x86-64.Large
     Environment:
       Name: codecatalyst-enviromment
-  AWSCDKDeploy_c9:
+  AWSCDKDeploy:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-deploy@v2.0.2
     # Required; You can use an environment to access AWS resources.
@@ -68,8 +68,8 @@ Actions:
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
     DependsOn:
-      - AWSCDKBootstrap_ec
-  AWSCDKBootstrap_ec:
+      - AWSCDKBootstrap
+  AWSCDKBootstrap:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-bootstrap@v2.0.1
     # Required; You can use an environment to access AWS resources.
@@ -84,4 +84,4 @@ Actions:
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
     DependsOn:
-      - Build_62
+      - Build_01

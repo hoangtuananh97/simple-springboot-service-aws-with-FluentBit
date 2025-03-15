@@ -41,7 +41,7 @@ Actions:
     Environment:
       Name: codecatalyst-enviromment
     DependsOn:
-      - AWSCDKDeploy_c9
+      - AWSCDKBootstrap_ec
   AWSCDKDeploy_c9:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-deploy@v2.0.2
@@ -60,7 +60,7 @@ Actions:
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
     DependsOn:
-      - AWSCDKBootstrap_ec
+      - Build_62
   AWSCDKBootstrap_ec:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-bootstrap@v2.0.1

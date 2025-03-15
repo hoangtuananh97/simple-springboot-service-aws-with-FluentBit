@@ -67,11 +67,6 @@ Actions:
   AWSCDKBootstrap_ec:
     # Identifies the action. Do not modify this value.
     Identifier: aws/cdk-bootstrap@v2.0.1
-    Outputs:
-      Artifacts:
-        - Name: cdkout
-          Files:
-            - cdk.out/**/*
     # Required; You can use an environment to access AWS resources.
     Environment:
       Name: codecatalyst-enviromment

@@ -12,5 +12,5 @@ Steps to deploy a simple springboot service to AWS using CDK
 2. Install AWS CDK using `npm install -g aws-cdk`
 3. Create a new CDK project using `cdk init app --language typescript`
 4. Run `cdk diff` to check the changes that will be made to the AWS resources
-5. Run `cdk synth` to check the generated CloudFormation template
+5. Run `cdk synth` to check the generated CloudFormation template.
 6. Run `cdk deploy` to deploy the resources to AWS.

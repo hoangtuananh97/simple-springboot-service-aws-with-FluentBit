@@ -10,6 +10,9 @@ Triggers:
     Branches:
       - testing2
 
+Variables:
+  - BranchName: ${WorkflowSource.BranchName}
+
 # Required - Define action configurations.
 Actions:
   Build_62:
@@ -67,6 +70,9 @@ Actions:
       CdkRootPath: springboot-application-aws-infra/
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
+      Context:
+        - BranchName: ${Variables.BranchName}
+
     DependsOn:
       - AWSCDKBootstrap_ec
   AWSCDKBootstrap_ec:

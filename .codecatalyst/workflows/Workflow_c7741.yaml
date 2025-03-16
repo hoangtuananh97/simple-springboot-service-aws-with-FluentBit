@@ -55,6 +55,9 @@ Actions:
       Name: codecatalyst-enviromment
     # Specifies the source and/or artifacts to pass to the action as input.
     Inputs:
+      variables:
+        - Name: ENV
+          Value: testing2
       # Optional
       Sources:
         - WorkflowSource # This specifies that the action requires this Workflow as a source
@@ -63,7 +66,7 @@ Actions:
     Compute:
       Type: EC2 # Defines the action's properties.
     Configuration:
-      StackName: SpringbootFargateCdkStack-${WorkflowSource.BranchName}
+      StackName: SpringbootFargateCdkStack-${ENV}
       CdkRootPath: springboot-application-aws-infra/
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0

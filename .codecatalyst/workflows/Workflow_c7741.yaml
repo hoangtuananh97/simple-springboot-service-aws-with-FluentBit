@@ -3,12 +3,9 @@ SchemaVersion: "1.0"
 
 # Optional - Set automatic triggers.
 Triggers:
-  - Type: Push
-    Branches:
-      - dev
   - Type: PUSH
     Branches:
-      - testing2
+      - testing3
 
 # Required - Define action configurations.
 Actions:
@@ -62,7 +59,7 @@ Actions:
         - cdkout
       Variables:
         - Name: ENV
-          Value: testing2
+          Value: testing3
     Compute:
       Type: EC2 # Defines the action's properties.
     Configuration:

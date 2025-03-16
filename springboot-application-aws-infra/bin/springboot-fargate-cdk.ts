@@ -8,7 +8,8 @@ const DEFAULT_REGION = 'ap-southeast-1';
 const context = app.node.getAllContext();
 console.log("getAllContext: ", context);
 console.log("branchName: ", context.branchName || "main");
-new SpringbootFargateCdkStack(app, 'SpringbootFargateCdkStackTesting2', {
+console.log("SpringbootFargateCdkStack: ", `SpringbootFargateCdkStack-${context.branchName}`);
+new SpringbootFargateCdkStack(app, `SpringbootFargateCdkStack-${context.branchName}`, {
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: DEFAULT_REGION,

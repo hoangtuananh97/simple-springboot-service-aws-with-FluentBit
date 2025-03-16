@@ -70,7 +70,7 @@ Actions:
       CdkRootPath: springboot-application-aws-infra/
       Region: ap-southeast-1
       CdkCliVersion: 2.179.0
-      Context: '{"branchName":"testing2"}'
+      Context: '{"branchName":"${ENV}"}'
     DependsOn:
       - AWSCDKBootstrap_ec
   AWSCDKBootstrap_ec:

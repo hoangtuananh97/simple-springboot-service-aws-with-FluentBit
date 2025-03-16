@@ -5,7 +5,7 @@ SchemaVersion: "1.0"
 Triggers:
   - Type: PUSH
     Branches:
-      - testing3
+      - testing4
 
 # Required - Define action configurations.
 Actions:
@@ -59,7 +59,7 @@ Actions:
         - cdkout
       Variables:
         - Name: ENV
-          Value: testing3
+          Value: testing4
     Compute:
       Type: EC2 # Defines the action's properties.
     Configuration:
